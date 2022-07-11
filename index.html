@@ -11,6 +11,27 @@
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 </head>
 <body>
-    
+    <main>
+        <section class="swiper-wrapper">
+            <article class="swiper-slide">1</article>
+            <article class="swiper-slide">2</article>
+            <article class="swiper-slide">3</article>
+            <article class="swiper-slide">4</article>
+            <article class="swiper-slide">5</article>
+        </section>
+    </main>
+
+    <script>
+        //기본 스와이퍼 연결법
+        const swiper = new Swiper("main",{
+            speed: 500, // 스와이프 패널 넘김 속도
+            loop: true,  // 스와이프 순환 
+            direction: "horizontal", // horizontal : 가로 , vertical : 세로  -> 스와이프 방향
+            grabCursor: true, 
+            slidesPerView: "auto", // 숫자 만큼 패널 뷰, "auto" == 100%
+            spaceBetween: 20, // 패널 사이 간격 (단위 : px)
+            centeredSlides: true,
+        });
+    </script>
 </body>
 </html>
