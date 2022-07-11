@@ -11,15 +11,68 @@
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 </head>
 <body>
+    <h1>We Are Best</h1>
     <main>
         <section class="swiper-wrapper">
-            <article class="swiper-slide">1</article>
-            <article class="swiper-slide">2</article>
-            <article class="swiper-slide">3</article>
-            <article class="swiper-slide">4</article>
-            <article class="swiper-slide">5</article>
+            <article class="swiper-slide">
+                <div class="inner">
+                    <div class="con">
+                        <img src="img/pic1.png" alt="pic1">
+                        <h2>Lorem ipsum dolor sit.</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, magni.</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="swiper-slide">
+                <div class="inner">
+                    <div class="con">
+                        <img src="img/pic2.png" alt="pic2">
+                        <h2>Labore repellendus est placeat!</h2>
+                        <p>Amet nemo animi, cum incidunt tempora ex quam asperiores iusto.</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="swiper-slide">
+                <div class="inner">
+                    <div class="con">
+                        <img src="img/pic3.png" alt="pic3">
+                        <h2>Unde laudantium corporis quasi.</h2>
+                        <p>Nihil odio voluptatum facere neque animi aperiam similique? Sapiente, consequuntur?</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="swiper-slide">
+                <div class="inner">
+                    <div class="con">
+                        <img src="img/pic4.png" alt="pic4">
+                        <h2>Lorem ipsum dolor sit.</h2>
+                        <p>Omnis animi veritatis ipsum commodi ullam. Quis corporis molestiae deleniti.</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="swiper-slide">
+                <div class="inner">
+                    <div class="con">
+                        <img src="img/pic5.png" alt="pic5">
+                        <h2>Dicta laudantium dolorem illum.</h2>
+                        <p>Fuga corrupti voluptatem ad commodi rem totam blanditiis pariatur amet?</p>
+                    </div>
+                </div>
+            </article>
+
         </section>
+
+        <nav class="swiper-pagination"></nav>
+
+        <nav class="swiper-button-prev navi"></nav>
+        <nav class="swiper-button-next navi"></nav>
     </main>
+
+    <footer>2022 W.A.B &copy; ALL RIGHTS RESERVED</footer>
 
     <script>
         //기본 스와이퍼 연결법
@@ -30,7 +83,26 @@
             grabCursor: true, 
             slidesPerView: "auto", // 숫자 만큼 패널 뷰, "auto" == 100%
             spaceBetween: 20, // 패널 사이 간격 (단위 : px)
-            centeredSlides: true,
+            centeredSlides: true, // 활성화 패널을 가운데 배치
+
+            pagination : {
+                el: ".swiper-pagination",   // 페이지 메뉴 추가
+                //clickable: true, // 클릭 가능 여부 설정
+                type: "fraction",
+            },
+
+            navigation : {
+                prevEl: ".swiper-button-prev",
+                nextEl : ".swiper-button-next"
+            },
+
+            effect: "coverflow",
+            coverflowEffect : {
+                rotate: 50, // y축 회전 각도
+                stretch: -100, // 당겨짐 정도
+                depth: 400, // 입체적 왜곡 효과 정도
+                slideShadows: false // 패널 그림자 설정
+            }
         });
     </script>
 </body>
